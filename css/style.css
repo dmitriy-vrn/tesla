@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: #0b0b0b;
+  color: #fff;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.header {
+  height: 100vh;
+  padding-top: 36px;
+  position: absolute;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.3);
+  left: 0;
+  right: 0;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+}
+.header-btn {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #ffffff;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+.btn-line {
+  width: 36px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+.btn-line::before,
+.btn-line::after {
+  content: "";
+  background: #fff;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+}
+.btn-line::before {
+  top: 11px;
+}
+.btn-line::after {
+  bottom: 11px;
+}
+
+.logo {
+  margin-bottom: 29px;
+}
+
+.header-content__title {
+  font-size: 96px;
+  line-height: 112px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 40px;
+}
+.header-content__text {
+  width: 284px;
+  margin-bottom: 25px;
+}
+.button {
+  display: inline-block;
+  padding: 30px 62px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid #fff;
+  color: #fff;
+  transition: 0.5s all;
+}
+.button:hover {
+  background: #770302;
+}
+
+/* Slick slider */
+
+.slider .slick-dots button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #0b0b0b;
+  border: 0;
+  padding: 0;
+  font-size: 0;
+  cursor: pointer;
+  outline: none;
+}
+.slider .slick-dots .slick-active button {
+  background: #fff;
+}
+.slider .slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.slider .slick-dots {
+  margin: -55px auto 0;
+  position: relative;
+  z-index: 6;
+  max-width: 1200px;
+}
+
+.slider__item {
+  height: 100vh;
+}
+.slider__item-1 {
+  background: url(../img/slider-1.jpg) no-repeat center;
+  background-size: cover;
+}
+.slider__item-2 {
+  background: url(../img/slider-2.jpg) no-repeat center;
+  background-size: cover;
+}
+.slider__item-3 {
+  background: url(../img/slider-3.jpg) no-repeat center;
+  background-size: cover;
+}
+
+/* Stats section  */
+
+.stats {
+  margin: 160px 0 100px;
+}
+
+.stats__items {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.stats__item__title {
+  margin-bottom: 19px;
+}
+.stats__item__num {
+  font-size: 96px;
+  line-height: 112px;
+  margin-bottom: 7px;
+  font-family: Roboto;
+}
+.stats__item__num--speed span {
+  display: inline-block;
+  position: relative;
+}
+.stats__item__num--speed span::before {
+  content: "+";
+  position: absolute;
+  top: -60px;
+}
+
+.stats__item__num span {
+  font-size: 24px;
+  line-height: 28px;
+  margin-left: -20px;
+}
+.stats__item-descr {
+  color: #b70021;
+}
+
+/* Video section */
+
+.video {
+  margin-bottom: 100px;
+}
+
+/* Advantages section */
+
+.advantages {
+  margin-bottom: 100px;
+}
+
+.advantages__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  align-items: center;
+  position: relative;
+}
+.advantages__descr {
+  max-width: 570px;
+  width: 100%;
+}
+.advantages__title {
+  font-size: 36px;
+  line-height: 42px;
+  color: #b70021;
+  position: absolute;
+  top: 0;
+}
+.advantages__title--bottom {
+  top: auto;
+  bottom: 0;
+  right: 0;
+}
+.advantages__text {
+  width: 303px;
+}
+.advantages__img {
+}
+
+/* Design section  */
+
+.design {
+  margin-bottom: 100px;
+}
+
+.design__img {
+  margin-bottom: 100px;
+}
+.design__descr {
+  display: flex;
+  justify-content: space-between;
+}
+.design__descr__item {
+  max-width: 570px;
+  width: 100%;
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.design__descr__item-num {
+  color: #b70021;
+}
+.design__descr__item-text {
+  max-width: 450px;
+  padding-top: 25px;
+}
+
+/* Footer section */
+
+.footer {
+  padding: 83px 0 20px;
+  background: #690102;
+}
+
+.footer-btn {
+  text-align: center;
+  margin-bottom: 83px;
+}
+.button {
+}
+.footer-copy {
+  text-align: center;
+  font-weight: 700;
+}
+.footer-copy li {
+  display: inline-block;
+  padding: 0 10px;
+  position: relative;
+}
+.footer-copy li + li::before {
+  content: "|";
+  position: absolute;
+  left: -5px;
+}
