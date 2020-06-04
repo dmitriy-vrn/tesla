@@ -93,10 +93,74 @@ a {
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid #fff;
   color: #fff;
-  transition: 0.5s all;
+  transition: 0.5s all ease-out;
 }
 .button:hover {
   background: #770302;
+}
+/* Menu */
+
+.menu {
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  transition: all 0.5s;
+  z-index: 7;
+}
+.menu.active {
+  left: 0;
+}
+.container-menu {
+  position: relative;
+}
+.close-btn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 20px;
+  top: 41px;
+  cursor: pointer;
+}
+.close-btn::after,
+.close-btn::before {
+  content: "";
+  width: 70px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  transform-origin: left;
+}
+.close-btn::before {
+  transform: rotate(45deg);
+}
+.close-btn::after {
+  transform: rotate(-45deg);
+  bottom: -1px;
+}
+
+.menu__list {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.menu__list a {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 700;
+  padding: 30px 25px 14px 0;
+  border-bottom: 3px solid #b70021;
+  display: inline-block;
+  min-width: 368px;
+  transition: all 0.5s;
+}
+
+.menu__list a:hover {
+  border-color: #fff;
+  color: #b70021;
+  transform: scale(1.2);
+  margin-left: 50px;
 }
 
 /* Slick slider */
@@ -123,7 +187,8 @@ a {
   margin: -55px auto 0;
   position: relative;
   z-index: 6;
-  max-width: 1200px;
+  max-width: 1230px;
+  padding: 0 15px;
 }
 
 .slider__item {
@@ -150,6 +215,7 @@ a {
 
 .stats__items {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   text-align: center;
 }
@@ -219,8 +285,6 @@ a {
 .advantages__text {
   width: 303px;
 }
-.advantages__img {
-}
 
 /* Design section  */
 
@@ -261,8 +325,7 @@ a {
   text-align: center;
   margin-bottom: 83px;
 }
-.button {
-}
+
 .footer-copy {
   text-align: center;
   font-weight: 700;
@@ -276,4 +339,113 @@ a {
   content: "|";
   position: absolute;
   left: -5px;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1220px) {
+  .advantages__text {
+    padding-left: 20px;
+  }
+  .design__img img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .design__descr {
+    display: block;
+  }
+  .design__descr__item {
+    max-width: 100%;
+    padding-right: 0;
+  }
+  .design__descr__item-text {
+    max-width: 100%;
+  }
+  .design__img,
+  .design__descr {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .advantages__row {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+  .advantages__descr {
+    text-align: center;
+  }
+  .advantages__text {
+    margin: 25px auto;
+    padding-left: 0;
+  }
+  .advantages__row--mobile .advantages__descr {
+    order: -1;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .advantages__title {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .stats__item {
+    margin: 0 15px 50px 0;
+  }
+  .stats__item__title {
+    margin-bottom: 10px;
+  }
+  .header-content__title {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .advantages__img img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .logo img {
+    width: 200px;
+  }
+  .header-content__title {
+    font-size: 70px;
+    line-height: 85px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  .header-content__text {
+    margin-bottom: 15px;
+  }
+  .button {
+    padding: 30px 50px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .slider .slick-dots {
+    margin: -70px auto 0;
+  }
+  .menu__list a {
+    font-size: 30px;
+    line-height: 44px;
+    padding: 19px 10px 7px 0;
+    display: block;
+    min-width: 100%;
+  }
+  .menu__list ul {
+    width: 100%;
+  }
+  .stats {
+    margin: 100px 0 65px;
+  }
+  .advantages__text {
+    width: 100%;
+  }
 }
